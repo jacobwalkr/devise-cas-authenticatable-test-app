@@ -25,6 +25,10 @@ docker-compose up -d
 docker-compose logs -f
 ```
 
+## Users
+
+`scripts/entrypoint.sh` seeds the LDAP server with a user called `user`, password `secret`.
+
 ## config/master.key
 
 If you need it, I guess:
