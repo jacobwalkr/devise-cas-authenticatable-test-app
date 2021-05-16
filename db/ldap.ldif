@@ -1,0 +1,17 @@
+version: 1
+
+dn: uid=user,ou=system
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: A User
+sn: User
+displayName: A User
+givenName: User
+initials: AU
+mail: a.user@example.com
+ou: Users
+uid: user
+userPassword:: e1NTSEF9T3ZMYkt3bzlCVW5IdzhZc2p0ajBzMmFrcUc4RzlEdEdBaldKZWc9P
+ Q==

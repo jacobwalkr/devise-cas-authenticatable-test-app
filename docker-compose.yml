@@ -1,0 +1,42 @@
+version: '3'
+
+networks:
+  bridge:
+    driver: bridge
+
+services:
+  app:
+    build: .
+    depends_on:
+      - "ldap"
+      - "cas"
+    environment:
+      - MYSQL_HOST=database
+      - MYSQL_ROOT_PASSWORD=root
+      - LDAP_HOST=ldap
+    networks:
+      - bridge
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - ../devise_cas_authenticatable:/devise_cas_authenticatable
+
+  cas:
+    build:
+      context: https://github.com/jacobwalkr/rbcas-casinoapp-docker.git
+    depends_on:
+      - "ldap"
+    environment:
+      - LDAP_HOST=ldap
+    networks:
+      - bridge
+    ports:
+      - "8181:8181"
+
+  ldap:
+    image: "greggigon/apacheds"
+    networks:
+      - bridge
+    ports:
+      - "10389:10389"
