@@ -29,8 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # auth
-# gem 'devise'
-# gem 'devise_cas_authenticatable', path: '/devise_cas_authenticatable'
+gem 'devise'
+gem 'devise_cas_authenticatable', path: '/devise_cas_authenticatable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
