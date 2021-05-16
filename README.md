@@ -1,24 +1,34 @@
-# README
+# devise-cas-authenticatable-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is purely for testing [devise_cas_authenticatable](https://github.com/nbudin/devise_cas_authenticatable) until I figure out a proper gem dev workflow.
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+Clone this app into a directory alongside the devise_cas_authenticatable gem like so:
 
-* System dependencies
+```
+- parent_dir/
+  | devise-cas-authenticatable-app
+  | devise_cas_authenticatable
+```
 
-* Configuration
+Run with:
 
-* Database creation
+```bash
+docker-compose build
 
-* Database initialization
+# foreground
+docker-compose up
 
-* How to run the test suite
+# background
+docker-compose up -d
+docker-compose logs -f
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## config/master.key
 
-* Deployment instructions
+If you need it, I guess:
 
-* ...
+```
+e2991d6ed6a14dc83b3b3b5f6434107a
+```
