@@ -1,4 +1,4 @@
-# devise-cas-authenticatable-app
+# devise-cas-authenticatable-test-app
 
 This app is purely for testing [devise_cas_authenticatable](https://github.com/nbudin/devise_cas_authenticatable) until I figure out a proper gem dev workflow.
 
@@ -8,7 +8,7 @@ Clone this app into a directory alongside the devise_cas_authenticatable gem lik
 
 ```
 - parent_dir/
-  | devise-cas-authenticatable-app
+  | devise-cas-authenticatable-test-app
   | devise_cas_authenticatable
 ```
 
